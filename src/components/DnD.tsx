@@ -1,7 +1,6 @@
 import { useCallback, useState } from 'react';
 import { useDrop, XYCoord } from 'react-dnd';
 import update from 'immutability-helper';
-
 import { CSSProperties, FC } from 'react';
 import { useDrag } from 'react-dnd';
 
@@ -88,10 +87,6 @@ const dnd = () => {
         moveBox(item.id, left, top);
         console.log('drop');
         return undefined;
-      },
-      hover: (...args) => {
-        console.log('hover');
-        console.log(args);
       }
     }),
     [moveBox]
